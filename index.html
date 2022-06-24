@@ -52,15 +52,18 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="#services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#portfolio">Portfolio</a>
+              <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+            <li class="nav-item">
+              <!-- #portfolioとなっているが#workと考えて良い。 -->
+              <a class="nav-link" href="#portfolio">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#profile">Profile</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
@@ -69,22 +72,25 @@
       </div>
     </nav>
     <!-- Masthead-->
-    <header class="masthead">
+    <header class="masthead" id="home">
       <div class="container">
-        <div class="masthead-subheading">Welcome To Our Studio!</div>
+        <div class="masthead-subheading">Welcome To My Portfolio site!</div>
         <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
         <a class="btn btn-primary btn-xl text-uppercase" href="#services"
           >Tell Me More</a
         >
       </div>
     </header>
-    <!-- Services-->
-    <section class="page-section" id="services">
+    <!-- About-->
+    <section class="page-section" id="about">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">Services</h2>
+          <h2 class="section-heading text-uppercase">About</h2>
           <h3 class="section-subheading text-muted">
-            Lorem ipsum dolor sit amet consectetur.
+            大学入学後、Webの道に進むと決めていて授業でHTML,CSS,JapaScriptなどのWebの基礎を学ぶ。
+            大学2年生の4月に親戚に頼まれた法務事務所のWebサイトを制作し初めて世の中に自身の制作物を公開した。
+            そして大学2年生の終わり、3月に親の建築事務所のWebサイトを制作し公開。
+            大学3年生では改めてリデザインを頼まれてReactを用いて制作した。
           </h3>
         </div>
         <div class="row text-center">
@@ -127,13 +133,13 @@
         </div>
       </div>
     </section>
-    <!-- Portfolio Grid-->
+    <!-- Works-->
     <section class="page-section bg-light" id="portfolio">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">Portfolio</h2>
+          <h2 class="section-heading text-uppercase">Works</h2>
           <h3 class="section-subheading text-muted">
-            Lorem ipsum dolor sit amet consectetur.
+            私が大学1〜3年生の間に作った作品一覧です。
           </h3>
         </div>
         <div class="row">
@@ -157,9 +163,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Threads</div>
+                <div class="portfolio-caption-heading">ONE OK ROCK</div>
+                <!-- <div class="portfolio-caption-subheading text-muted">
+                  HTML×SCSS×JavaScript×BootStrap
+                </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  Illustration
+                  2022.5.19
                 </div>
               </div>
             </div>
@@ -184,9 +193,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Explore</div>
+                <div class="portfolio-caption-heading">DHU_web</div>
+                <!-- <div class="portfolio-caption-subheading text-muted">
+                  HTML×SCSS×JavaScript×BootStrap×Illustrator
+                </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  Graphic Design
+                  2022.5.27
                 </div>
               </div>
             </div>
@@ -211,9 +223,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Finish</div>
+                <div class="portfolio-caption-heading">山下法務事務所</div>
+                <!-- <div class="portfolio-caption-subheading text-muted">
+                  HTML×CSS×BootStrap×firebase
+                </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  Identity
+                  2021.4.4
                 </div>
               </div>
             </div>
@@ -238,9 +253,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Lines</div>
+                <div class="portfolio-caption-heading">Portfolio</div>
+                <!-- <div class="portfolio-caption-subheading text-muted">
+                  HTML×CSS×BootStrap Start×firebase
+                </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  Branding
+                  2022.6.24
                 </div>
               </div>
             </div>
@@ -265,9 +283,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Southwest</div>
+                <div class="portfolio-caption-heading">多田建築事務所01</div>
+                <!-- <div class="portfolio-caption-subheading text-muted">
+                  HTML×CSS×JavaScript×firebase
+                </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  Website Design
+                  2022.3.12
                 </div>
               </div>
             </div>
@@ -292,9 +313,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Window</div>
+                <div class="portfolio-caption-heading">多田建築事務所02</div>
+                <!-- <div class="portfolio-caption-subheading text-muted">
+                  HTML×SCSS×JavaScript×React×BootStrap×firebase
+                </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  Photography
+                  2022.6.8
                 </div>
               </div>
             </div>
@@ -302,13 +326,13 @@
         </div>
       </div>
     </section>
-    <!-- About-->
-    <section class="page-section" id="about">
+    <!-- Profile-->
+    <section class="page-section" id="profile">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
+          <h2 class="section-heading text-uppercase">Profile</h2>
           <h3 class="section-subheading text-muted">
-            Lorem ipsum dolor sit amet consectetur.
+            私が生まれてからWebに興味を持ち、実際にプロダクトを作るなど、現在までの過程です。
           </h3>
         </div>
         <ul class="timeline">
@@ -418,120 +442,29 @@
         </ul>
       </div>
     </section>
-    <!-- Team-->
-    <section class="page-section bg-light" id="team">
-      <div class="container">
-        <div class="text-center">
-          <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 class="section-subheading text-muted">
-            Lorem ipsum dolor sit amet consectetur.
-          </h3>
-        </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="team-member">
-              <img
-                class="mx-auto rounded-circle"
-                src="assets/img/team/1.jpg"
-                alt="..."
-              />
-              <h4>Parveen Anand</h4>
-              <p class="text-muted">Lead Designer</p>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Parveen Anand Twitter Profile"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Parveen Anand Facebook Profile"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Parveen Anand LinkedIn Profile"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="team-member">
-              <img
-                class="mx-auto rounded-circle"
-                src="assets/img/team/2.jpg"
-                alt="..."
-              />
-              <h4>Diana Petersen</h4>
-              <p class="text-muted">Lead Marketer</p>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Diana Petersen Twitter Profile"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Diana Petersen Facebook Profile"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Diana Petersen LinkedIn Profile"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="team-member">
-              <img
-                class="mx-auto rounded-circle"
-                src="assets/img/team/3.jpg"
-                alt="..."
-              />
-              <h4>Larry Parker</h4>
-              <p class="text-muted">Lead Developer</p>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Larry Parker Twitter Profile"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Larry Parker Facebook Profile"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a
-                class="btn btn-dark btn-social mx-2"
-                href="#!"
-                aria-label="Larry Parker LinkedIn Profile"
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut
-              eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam
-              corporis ea, alias ut unde.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
     <!-- Clients-->
     <div class="py-5">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-3 col-sm-6 my-3">
+          <div class="col-md-1 col-sm-6 my-3">
+            <a href="#!"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="assets/img/logos/microsoft.svg"
+                alt="..."
+                aria-label="Microsoft Logo"
+            /></a>
+          </div>
+          <div class="col-md-1 col-sm-6 my-3">
+            <a href="#!"
+              ><img
+                class="img-fluid img-brand d-block mx-auto"
+                src="assets/img/logos/microsoft.svg"
+                alt="..."
+                aria-label="Microsoft Logo"
+            /></a>
+          </div>
+          <div class="col-md-1 col-sm-6 my-3">
             <a href="#!"
               ><img
                 class="img-fluid img-brand d-block mx-auto"
@@ -1086,5 +1019,12 @@
     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- scrolltop pagetop js -->
+    <script src="js/pageTop.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
