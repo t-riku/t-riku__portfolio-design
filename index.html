@@ -55,6 +55,7 @@
               <a class="nav-link" href="#home">Home</a>
             </li>
             <li class="nav-item">
+              <!-- #area-2となっているが#workと考えて良い。scrolltopのために -->
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
@@ -84,16 +85,38 @@
     <!-- About-->
     <section class="page-section" id="about">
       <div class="container">
-        <div class="text-center">
-          <h2 class="section-heading text-uppercase">About</h2>
-          <h3 class="section-subheading text-muted">
-            大学入学後、Webの道に進むと決めていて授業でHTML,CSS,JapaScriptなどのWebの基礎を学ぶ。
-            大学2年生の4月に親戚に頼まれた法務事務所のWebサイトを制作し初めて世の中に自身の制作物を公開した。
-            そして大学2年生の終わり、3月に親の建築事務所のWebサイトを制作し公開。
-            大学3年生では改めてリデザインを頼まれてReactを用いて制作した。
-          </h3>
+        <div class="row">
+          <h2
+            class="col-md-8 mx-auto text-center section-heading text-uppercase"
+          >
+            About
+          </h2>
+          <div class="col-md-10 text-center riku-intro mx-auto">
+            <img
+              src="assets/img/about/taka.jpg"
+              alt="riku-tada"
+              data-micromodal-trigger="about-hiroshi"
+            />
+            <h5 class="mb-0 mt-4">多田 陸</h5>
+            <p>2000.10.13</p>
+          </div>
+          <div class="col-md-7 col-sm-12 mx-auto">
+            <h3 class="section-subheading text-muted">
+              大学入学後、Webの道に進むと決めていて授業でHTML,CSS,JapaScriptなどのWebの基礎を学ぶ。
+              大学2年生の4月に親戚に頼まれた法務事務所のWebサイトを制作し初めて世の中に自身の制作物を公開した。
+              そして大学2年生の終わり、3月に親の建築事務所のWebサイトを制作し公開。
+              大学3年生では改めてリデザインを頼まれてReactを用いて制作した。
+            </h3>
+            <div class="text-center mb-5">
+              <a
+                data-micromodal-trigger="about-hiroshi"
+                class="btn btn-outline-dark py-2 px-4 text-center"
+                >More</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="row text-center">
+        <div class="row text-center mt-5">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -340,7 +363,7 @@
             <div class="timeline-image">
               <img
                 class="rounded-circle img-fluid"
-                src="assets/img/about/1.jpg"
+                src="assets/img/profile/1.jpg"
                 alt="..."
               />
             </div>
@@ -363,7 +386,7 @@
             <div class="timeline-image">
               <img
                 class="rounded-circle img-fluid"
-                src="assets/img/about/2.jpg"
+                src="assets/img/profile/2.jpg"
                 alt="..."
               />
             </div>
@@ -386,7 +409,7 @@
             <div class="timeline-image">
               <img
                 class="rounded-circle img-fluid"
-                src="assets/img/about/3.jpg"
+                src="assets/img/profile/3.jpg"
                 alt="..."
               />
             </div>
@@ -409,7 +432,7 @@
             <div class="timeline-image">
               <img
                 class="rounded-circle img-fluid"
-                src="assets/img/about/4.jpg"
+                src="assets/img/profile/4.jpg"
                 alt="..."
               />
             </div>
@@ -620,7 +643,11 @@
       </div>
     </section>
     <!-- Footer-->
-    <footer class="footer py-4">
+    <footer class="footer py-4" id="footer">
+      <p class="js-scroll scroll-top scrollview">
+        <a href="#about">Scroll</a>
+      </p>
+      <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4 text-lg-start">
@@ -1020,11 +1047,11 @@
     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
     <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     <!-- scrolltop pagetop js -->
-    <script src="js/pageTop.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
+    <script src="js/pageTop.js"></script>
   </body>
 </html>
