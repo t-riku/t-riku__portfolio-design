@@ -27,8 +27,20 @@
       rel="stylesheet"
       type="text/css"
     />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <!-- Core theme CSS-->
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
   </head>
   <body id="page-top">
     <!-- Navigation-->
@@ -59,11 +71,14 @@
               <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <!-- #portfolioとなっているが#workと考えて良い。 -->
-              <a class="nav-link" href="#portfolio">Works</a>
+              <a class="nav-link" href="#skill">Skill</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#profile">Profile</a>
+              <!-- #portfolioとなっているが#productと考えて良い。 -->
+              <a class="nav-link" href="#portfolio">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#process">Process</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
@@ -72,36 +87,39 @@
         </div>
       </div>
     </nav>
+
     <!-- Masthead-->
     <header class="masthead" id="home">
       <div class="container">
         <div class="masthead-subheading">Welcome To My Portfolio site!</div>
         <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-        <a class="btn btn-primary btn-xl text-uppercase" href="#services"
+        <a class="btn button-yellow btn-xl text-uppercase p-3" href="#about"
           >Tell Me More</a
         >
       </div>
     </header>
+
     <!-- About-->
-    <section class="page-section" id="about">
+    <section class="page-section bg-light" id="about">
       <div class="container">
         <div class="row">
-          <h2
-            class="col-md-8 mx-auto text-center section-heading text-uppercase"
-          >
-            About
-          </h2>
+          <div class="col-md-8 mx-auto text-center">
+            <h6>About</h6>
+            <h2 class="section-heading text-uppercase">About Me</h2>
+          </div>
+
           <div class="col-md-10 text-center riku-intro mx-auto">
             <img
               src="assets/img/about/taka.jpg"
-              alt="riku-tada"
-              data-micromodal-trigger="about-hiroshi"
+              alt="t-riku"
+              data-bs-toggle="modal"
+              href="#portfolioModal__t-riku"
             />
             <h5 class="mb-0 mt-4">多田 陸</h5>
             <p>2000.10.13</p>
           </div>
           <div class="col-md-7 col-sm-12 mx-auto">
-            <h3 class="section-subheading text-muted">
+            <h3 class="section-subheading text-muted mb-5">
               大学入学後、Webの道に進むと決めていて授業でHTML,CSS,JapaScriptなどのWebの基礎を学ぶ。
               大学2年生の4月に親戚に頼まれた法務事務所のWebサイトを制作し初めて世の中に自身の制作物を公開した。
               そして大学2年生の終わり、3月に親の建築事務所のWebサイトを制作し公開。
@@ -109,24 +127,23 @@
             </h3>
             <div class="text-center mb-5">
               <a
-                data-micromodal-trigger="about-hiroshi"
+                data-bs-toggle="modal"
+                href="#portfolioModal__t-riku"
                 class="btn btn-outline-dark py-2 px-4 text-center"
                 >More</a
               >
             </div>
           </div>
         </div>
-        <div class="row text-center mt-5">
+        <div class="row text-center mt-5 pb-5 g-4">
           <div class="col-md-4">
             <span class="fa-stack fa-4x">
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="my-3">E-Commerce</h4>
+            <h4 class="my-3">Website制作経験が多い</h4>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              今まで作ってきたサイトはGitHubにものってない小さいものを含めると50以上。つまずきながらも検索力を身につけ自力で制作した。人から頼まれたものを公開した経験もある。最近はReactに力を入れてWebsiteを制作していて,サーバーサイド側にも手を伸ばしている。
             </p>
           </div>
           <div class="col-md-4">
@@ -134,11 +151,9 @@
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="my-3">Responsive Design</h4>
+            <h4 class="my-3">UI / UXの知識が豊富</h4>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              UIでは見やすいフォントやトレンドデザインを意識し、UXでは読み込み速度を速くするためのReactやユーザーの興味を引き立てるようなトップページ作成や飽きさせないように細かな動きをつけたりなどの日頃から意識して制作したことで知識が身についた。
             </p>
           </div>
           <div class="col-md-4">
@@ -146,23 +161,89 @@
               <i class="fas fa-circle fa-stack-2x text-primary"></i>
               <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
             </span>
-            <h4 class="my-3">Web Security</h4>
+            <h4 class="my-3">様々なフレームワークを扱える</h4>
             <p class="text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
-              maxime quam architecto quo inventore harum ex magni, dicta
-              impedit.
+              JavaScriptではjQueryと人気なReact , Next.js。CSSではBootStrap ,
+              近年流行なTailwind CSS
+              などを扱える。Reactを使って身の回りにあるチャット、天気、ニュースアプリ制作などアウトプットで学んできた。最近はReact
+              × TypeScript × TailwindCSS での制作が多い。
             </p>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Skill -->
+    <section class="page-section bg-light" id="skill">
+      <div class="container">
+        <div class="row mt-5 mb-4">
+          <div class="col-md-8 mx-auto text-center">
+            <h6>Skill</h6>
+            <h2 class="section-heading text-uppercase">My skill set</h2>
+            <p class="text-muted">僕が扱える言語、ツールの一覧です。</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="skill-card text-center">
+            <div class="skill-card__item card-effect">
+              <img src="assets/img/about/skills/HTML02.png" alt="HTML__icon" />
+              <h5 class="mb-1 mt-4">HTML</h5>
+              <ul>
+                <li>HTML</li>
+              </ul>
+            </div>
+            <div class="skill-card__item card-effect">
+              <img src="assets/img/about/skills/CSS02.png" alt="CSS__icon" />
+              <h5 class="mb-1 mt-4">CSS</h5>
+              <ul>
+                <li>CSS</li>
+                <li>SCSS</li>
+                <li>BootStrap</li>
+                <li>Tailwind CSS</li>
+              </ul>
+            </div>
+            <div class="skill-card__item card-effect">
+              <img
+                src="assets/img/about/skills/JS03.png"
+                class="JS__icon"
+                alt="JS__icon"
+              />
+              <h5 class="mb-1 mt-4">JavaScript</h5>
+              <ul>
+                <li>JavaScript</li>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>jQuery</li>
+              </ul>
+            </div>
+            <div class="skill-card__item card-effect">
+              <img
+                src="assets/img/about/skills/Gear.png"
+                class="Others__icon"
+                alt="Others__icon"
+              />
+              <h5 class="mb-1 mt-4">Others</h5>
+              <ul>
+                <li>Firebase</li>
+                <li>GitHub</li>
+                <li>llustrator</li>
+                <li>Photoshop</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Works-->
     <section class="page-section bg-light" id="portfolio">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">Works</h2>
+          <h6>Product</h6>
+          <h2 class="section-heading text-uppercase">My Product</h2>
           <h3 class="section-subheading text-muted">
-            私が大学1〜3年生の間に作った作品一覧です。
+            僕が大学1〜3年生の間に作った制作物一覧です。
           </h3>
         </div>
         <div class="row">
@@ -186,12 +267,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">ONE OK ROCK</div>
+                <div class="portfolio-caption-heading">山下法務事務所</div>
                 <!-- <div class="portfolio-caption-subheading text-muted">
                   HTML×SCSS×JavaScript×BootStrap
                 </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  2022.5.19
+                  2021.4.4
                 </div>
               </div>
             </div>
@@ -216,12 +297,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">DHU_web</div>
+                <div class="portfolio-caption-heading">多田建築事務所01</div>
                 <!-- <div class="portfolio-caption-subheading text-muted">
                   HTML×SCSS×JavaScript×BootStrap×Illustrator
                 </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  2022.5.27
+                  2022.3.12
                 </div>
               </div>
             </div>
@@ -246,12 +327,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">山下法務事務所</div>
+                <div class="portfolio-caption-heading">多田建築事務所02</div>
                 <!-- <div class="portfolio-caption-subheading text-muted">
                   HTML×CSS×BootStrap×firebase
                 </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  2021.4.4
+                  2022.6.8
                 </div>
               </div>
             </div>
@@ -276,12 +357,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">Portfolio</div>
+                <div class="portfolio-caption-heading">ONE OK ROCK</div>
                 <!-- <div class="portfolio-caption-subheading text-muted">
                   HTML×CSS×BootStrap Start×firebase
                 </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  2022.6.24
+                  2022.5.19
                 </div>
               </div>
             </div>
@@ -306,12 +387,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">多田建築事務所01</div>
+                <div class="portfolio-caption-heading">DHU</div>
                 <!-- <div class="portfolio-caption-subheading text-muted">
                   HTML×CSS×JavaScript×firebase
                 </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  2022.3.12
+                  2022.5.27
                 </div>
               </div>
             </div>
@@ -336,12 +417,12 @@
                 />
               </a>
               <div class="portfolio-caption">
-                <div class="portfolio-caption-heading">多田建築事務所02</div>
+                <div class="portfolio-caption-heading">Portfolio</div>
                 <!-- <div class="portfolio-caption-subheading text-muted">
                   HTML×SCSS×JavaScript×React×BootStrap×firebase
                 </div> -->
                 <div class="portfolio-caption-subheading text-muted">
-                  2022.6.8
+                  2022.6.24
                 </div>
               </div>
             </div>
@@ -349,13 +430,16 @@
         </div>
       </div>
     </section>
+
     <!-- Profile-->
-    <section class="page-section" id="profile">
+    <section class="page-section bg-light" id="process">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">Profile</h2>
+          <h6>Process</h6>
+          <h2 class="section-heading text-uppercase">My Process</h2>
           <h3 class="section-subheading text-muted">
-            私が生まれてからWebに興味を持ち、実際にプロダクトを作るなど、現在までの過程です。
+            僕が IT/Web
+            に興味を持ち、実際にプロダクトを制作している現在までの過程です。
           </h3>
         </div>
         <ul class="timeline">
@@ -369,15 +453,12 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>2009-2011</h4>
-                <h4 class="subheading">Our Humble Beginnings</h4>
+                <h4>2014.11</h4>
+                <h4 class="subheading">IT に興味を示す</h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
-                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
-                  dolore laudantium consectetur!
+                  母親が2014年にiPhone6を買ってきた。当時テレビでiPhoneのニュースを見てもこんなちっちゃい物が何に役に立つのだろうって思っていたが、実際に見て触ってみると常識が覆された。当時BLEACHの主人公になりたいと思っていた僕が初めて将来こんなすごいものを作りたいと思った。
                 </p>
               </div>
             </div>
@@ -392,8 +473,8 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>March 2011</h4>
-                <h4 class="subheading">An Agency is Born</h4>
+                <h4>2016.10</h4>
+                <h4 class="subheading">初めてiPhoneを手にする</h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
@@ -415,8 +496,8 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>December 2015</h4>
-                <h4 class="subheading">Transition to Full Service</h4>
+                <h4>2020.4</h4>
+                <h4 class="subheading">Webを学び始める</h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
@@ -438,8 +519,56 @@
             </div>
             <div class="timeline-panel">
               <div class="timeline-heading">
-                <h4>July 2020</h4>
-                <h4 class="subheading">Phase Two Expansion</h4>
+                <h4>2021.4</h4>
+                <h4 class="subheading">
+                  フロントエンドの設計や構築が好きになる
+                </h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
+                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                  dolore laudantium consectetur!
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <img
+                class="rounded-circle img-fluid"
+                src="assets/img/profile/3.jpg"
+                alt="..."
+              />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>2021.4</h4>
+                <h4 class="subheading">Reactを使ったHPを制作する</h4>
+              </div>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                  ut voluptatum eius sapiente, totam reiciendis temporibus qui
+                  quibusdam, recusandae sit vero unde, sed, incidunt et ea quo
+                  dolore laudantium consectetur!
+                </p>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-inverted">
+            <div class="timeline-image">
+              <img
+                class="rounded-circle img-fluid"
+                src="assets/img/profile/4.jpg"
+                alt="..."
+              />
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>2021.4 〜</h4>
+                <h4 class="subheading">Webサイト制作経験を重ねる</h4>
               </div>
               <div class="timeline-body">
                 <p class="text-muted">
@@ -454,85 +583,24 @@
           <li class="timeline-inverted">
             <div class="timeline-image">
               <h4>
-                Be Part
+                Until
                 <br />
-                Of Our
                 <br />
-                Story!
+                now!!
               </h4>
             </div>
           </li>
         </ul>
       </div>
     </section>
-    <!-- Clients-->
-    <div class="py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-1 col-sm-6 my-3">
-            <a href="#!"
-              ><img
-                class="img-fluid img-brand d-block mx-auto"
-                src="assets/img/logos/microsoft.svg"
-                alt="..."
-                aria-label="Microsoft Logo"
-            /></a>
-          </div>
-          <div class="col-md-1 col-sm-6 my-3">
-            <a href="#!"
-              ><img
-                class="img-fluid img-brand d-block mx-auto"
-                src="assets/img/logos/microsoft.svg"
-                alt="..."
-                aria-label="Microsoft Logo"
-            /></a>
-          </div>
-          <div class="col-md-1 col-sm-6 my-3">
-            <a href="#!"
-              ><img
-                class="img-fluid img-brand d-block mx-auto"
-                src="assets/img/logos/microsoft.svg"
-                alt="..."
-                aria-label="Microsoft Logo"
-            /></a>
-          </div>
-          <div class="col-md-3 col-sm-6 my-3">
-            <a href="#!"
-              ><img
-                class="img-fluid img-brand d-block mx-auto"
-                src="assets/img/logos/google.svg"
-                alt="..."
-                aria-label="Google Logo"
-            /></a>
-          </div>
-          <div class="col-md-3 col-sm-6 my-3">
-            <a href="#!"
-              ><img
-                class="img-fluid img-brand d-block mx-auto"
-                src="assets/img/logos/facebook.svg"
-                alt="..."
-                aria-label="Facebook Logo"
-            /></a>
-          </div>
-          <div class="col-md-3 col-sm-6 my-3">
-            <a href="#!"
-              ><img
-                class="img-fluid img-brand d-block mx-auto"
-                src="assets/img/logos/ibm.svg"
-                alt="..."
-                aria-label="IBM Logo"
-            /></a>
-          </div>
-        </div>
-      </div>
-    </div>
+
     <!-- Contact-->
     <section class="page-section" id="contact">
       <div class="container">
         <div class="text-center">
-          <h2 class="section-heading text-uppercase">Contact Us</h2>
+          <h2 class="section-heading text-uppercase">Contact me</h2>
           <h3 class="section-subheading text-muted">
-            Lorem ipsum dolor sit amet consectetur.
+            最後までご覧いただきありがとうございました。もしこのサイトや私について何かコメントがありましたら、下記フォームをご利用ください。
           </h3>
         </div>
         <!-- * * * * * * * * * * * * * * *-->
@@ -632,7 +700,7 @@
           <!-- Submit Button-->
           <div class="text-center">
             <button
-              class="btn btn-primary btn-xl text-uppercase disabled"
+              class="btn button-yellow btn-xl text-uppercase disabled"
               id="submitButton"
               type="submit"
             >
@@ -642,6 +710,7 @@
         </form>
       </div>
     </section>
+
     <!-- Footer-->
     <footer class="footer py-4" id="footer">
       <p class="js-scroll scroll-top scrollview">
@@ -649,39 +718,193 @@
       </p>
       <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-4 text-lg-start">
-            Copyright &copy; Your Website 2022
+        <div class="row align-items-center footer-wrapper">
+          <div class="col-lg-4 text-lg-center">
+            <small>&copy; t-riku portfolio. All Rights Reserved.</small>
           </div>
-          <div class="col-lg-4 my-3 my-lg-0">
+          <div class="col-lg-2 my-3">
             <a
               class="btn btn-dark btn-social mx-2"
-              href="#!"
-              aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
+              href="https://github.com/t-riku"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              ><i class="bi bi-github"></i
             ></a>
-            <a
-              class="btn btn-dark btn-social mx-2"
-              href="#!"
-              aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
+            <!-- <a
               class="btn btn-dark btn-social mx-2"
               href="#!"
               aria-label="LinkedIn"
               ><i class="fab fa-linkedin-in"></i
-            ></a>
+            ></a> -->
           </div>
-          <div class="col-lg-4 text-lg-end">
-            <a class="link-dark text-decoration-none me-3" href="#!"
+          <div class="col-lg-6 text-lg-end">
+            <!-- <a class="link-dark text-decoration-none me-3" href="#!"
               >Privacy Policy</a
             >
-            <a class="link-dark text-decoration-none" href="#!">Terms of Use</a>
+            <a class="link-dark text-decoration-none" href="#!">Terms of Use</a> -->
+            <ul class="text-uppercase py-2">
+              <li class="nav-item">
+                <a class="link-dark" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <!-- #area-2となっているが#workと考えて良い。scrolltopのために -->
+                <a class="link-dark" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="link-dark" href="#skill">Skill</a>
+              </li>
+              <li class="nav-item">
+                <!-- #portfolioとなっているが#productと考えて良い。 -->
+                <a class="link-dark" href="#portfolio">Product</a>
+              </li>
+              <li class="nav-item">
+                <a class="link-dark" href="#profile">Process</a>
+              </li>
+              <li class="nav-item">
+                <a class="link-dark" href="#contact">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- About Modals-->
+    <!-- About item t-riku modal popup-->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal__t-riku"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="close-modal" data-bs-dismiss="modal">
+            <img src="assets/img/close-icon.svg" alt="Close modal" />
+          </div>
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <div class="modal-body t-riku">
+                  <!-- Project details-->
+
+                  <img
+                    class="img-fluid d-block mx-auto"
+                    src="assets/img/about/taka.jpg"
+                    alt="t-riku"
+                  />
+                  <h2 class="text-uppercase">多田　陸</h2>
+                  <p class="item-intro text-muted">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </p>
+                  <ul class="list-inline mt-4">
+                    <li>
+                      <span>誕生日 : </span>
+                      2000.10.13
+                    </li>
+                    <li>
+                      <span>現住 : </span>
+                      神奈川県藤沢市湘南台
+                    </li>
+                    <li>
+                      <span>好きな動物 : </span>
+                      シャチ
+                    </li>
+                    <li>
+                      <span>好きなもの : </span>
+                      ONE OK ROCK
+                    </li>
+                    <li>
+                      <span>趣味 : </span>
+                      スマブラ、音楽を聴くこと
+                    </li>
+                    <li>
+                      <span>好きな食べ物:</span>
+                      豆腐(湯豆腐、冷奴、卵豆腐、豆乳)
+                    </li>
+                    <li class="long">
+                      <span>目標:</span>
+                      バックエンドの知識がまだ乏しいのでコードを書いたり、既存のWebsiteに導入したりしてバックエンドの専門性を高める。
+                    </li>
+                  </ul>
+                  <!-- <ul class="chronology">
+                    <li>
+                      <span>2000</span>
+                      生誕
+                    </li>
+                    <li>
+                      <span>2002</span>
+                      湘南台保育園入園
+                    </li>
+                    <li>
+                      <span>2007</span>
+                      湘南台小学校入学
+                    </li>
+                    <li>
+                      <span>2013</span>
+                      湘南台中学入学
+                    </li>
+                    <li>
+                      <span>2016</span>
+                      七里ガ浜高等学校入学
+                    </li>
+                    <li>
+                      <span>2019</span>
+                      浪人
+                    </li>
+                    <li>
+                      <span>2020</span>
+                      デジタルハリウッド大学入学
+                    </li>
+                  </ul> -->
+                  <div class="chronology">
+                    <div class="chronology__item">
+                      <p>2000</p>
+                      <p>生誕</p>
+                    </div>
+                    <div class="chronology__item">
+                      <p>2002</p>
+                      <p>湘南台保育園入園</p>
+                    </div>
+                    <div class="chronology__item">
+                      <p>2007</p>
+                      <p>湘南台小学校入学</p>
+                    </div>
+                    <div class="chronology__item">
+                      <p>2013</p>
+                      <p>湘南台中学入学</p>
+                    </div>
+                    <div class="chronology__item">
+                      <p>2016</p>
+                      <p>七里ガ浜高等学校入学</p>
+                    </div>
+                    <div class="chronology__item">
+                      <p>2019</p>
+                      <p>浪人</p>
+                    </div>
+                    <div class="chronology__item">
+                      <p>2020</p>
+                      <p>デジタルハリウッド大学入学</p>
+                    </div>
+                  </div>
+
+                  <button
+                    class="btn button-yellow btn-xl text-uppercase mt-5"
+                    data-bs-dismiss="modal"
+                    type="button"
+                  >
+                    <i class="fas fa-xmark me-1"></i>
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Portfolio Modals-->
     <!-- Portfolio item 1 modal popup-->
     <div
@@ -701,39 +924,63 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project details-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">山下法務事務所</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    祖父母が司法書士、行政書士であり事務所をやっていてそのHPを作らせてもらいました。
                   </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/1.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  <div class="modalImg-wrapper">
+                    <div class="mainImg">
+                      <img src="assets/img/portfolio/1.jpg" />
+                    </div>
+                    <ul class="subImg">
+                      <li class="current">
+                        <img src="assets/img/portfolio/1.jpg" />
+                      </li>
+                      <li><img src="assets/img/portfolio/2.jpg" /></li>
+                      <li><img src="assets/img/portfolio/3.jpg" /></li>
+                      <li><img src="assets/img/portfolio/4.jpg" /></li>
+                    </ul>
+                  </div>
+                  <p class="item-intro-intro">
+                    僕が大学2年生になる前の春休みに九州にいる祖父母の家に行って制作したHPです。つまづいた時に最初はうまい検索の仕方がわかりませんでしたが、徐々に検索力が身につきました。今思うとずっと手探り状態でやっていたなと思いましたがとても良い経験になりました。大学でWebの基礎を学んだ後初めて公の場に出しました。基本的にデザインは法務事務所らしくきっちりとした感じを出せるように作り、シンプルで情報量が多くならないように作りました。
                   </p>
                   <ul class="list-inline">
                     <li>
-                      <strong>Client:</strong>
-                      Threads
+                      <strong>Category : </strong>
+                      Office
                     </li>
                     <li>
-                      <strong>Category:</strong>
-                      Illustration
+                      <strong>Language tools :</strong>
+                      HTML , CSS , Bootstrap , Firebase
+                    </li>
+                  </ul>
+                  <ul class="button-flex">
+                    <li>
+                      <a
+                        href="https://yamashita-js-office.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >HP</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/YamashitaOffice/homepage/tree/develop"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >GitHub</a
+                      >
                     </li>
                   </ul>
                   <button
-                    class="btn btn-primary btn-xl text-uppercase"
+                    class="btn button-yellow btn-xl text-uppercase"
                     data-bs-dismiss="modal"
                     type="button"
                   >
                     <i class="fas fa-xmark me-1"></i>
-                    Close Project
+                    Close
                   </button>
                 </div>
               </div>
@@ -760,39 +1007,64 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project details-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">多田設計事務所</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    父母が一級建築士であり事務所をやっていてそのHPを作らせてもらいました。
                   </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/2.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  <div class="modalImg-wrapper">
+                    <div class="mainImg">
+                      <img src="assets/img/portfolio/2.jpg" />
+                    </div>
+                    <ul class="subImg">
+                      <li class="current">
+                        <img src="assets/img/portfolio/2.jpg" />
+                      </li>
+                      <li><img src="assets/img/portfolio/3.jpg" /></li>
+                      <li><img src="assets/img/portfolio/4.jpg" /></li>
+                      <li><img src="assets/img/portfolio/5.jpg" /></li>
+                    </ul>
+                  </div>
+                  <p class="item-intro-intro">
+                    僕が大学2年生になる前の春休みに九州にいる祖父母の家に行って制作したHPです。つまづいた時に最初はうまい検索の仕方がわかりませんでしたが、徐々に検索力が身につきました。今思うとずっと手探り状態でやっていたなと思いましたがとても良い経験になりました。大学でWebの基礎を学んだ後初めて公の場に出しました。基本的にデザインは法務事務所らしくきっちりとした感じを出せるように作り、シンプルで情報量が多くならないように作りました。
                   </p>
                   <ul class="list-inline">
                     <li>
-                      <strong>Client:</strong>
-                      Explore
+                      <strong>Category : </strong>
+                      Office
                     </li>
                     <li>
-                      <strong>Category:</strong>
-                      Graphic Design
+                      <strong>Language tools :</strong>
+                      HTML , SCSS , React , Bootstrap , Firebase
                     </li>
                   </ul>
+                  <ul class="button-flex">
+                    <li>
+                      <a
+                        href="https://www.arttada.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >HP</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/t-riku/tada-home/tree/master"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >GitHub</a
+                      >
+                    </li>
+                  </ul>
+
                   <button
-                    class="btn btn-primary btn-xl text-uppercase"
+                    class="btn button-yellow btn-xl text-uppercase"
                     data-bs-dismiss="modal"
                     type="button"
                   >
                     <i class="fas fa-xmark me-1"></i>
-                    Close Project
+                    Close
                   </button>
                 </div>
               </div>
@@ -819,39 +1091,64 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project details-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">多田設計事務所(redesign)</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    前回作ったHPのリデザインをお願いされたので制作しました。
                   </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/3.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  <div class="modalImg-wrapper">
+                    <div class="mainImg">
+                      <img src="assets/img/portfolio/3.jpg" />
+                    </div>
+                    <ul class="subImg">
+                      <li class="current">
+                        <img src="assets/img/portfolio/3.jpg" />
+                      </li>
+                      <li><img src="assets/img/portfolio/4.jpg" /></li>
+                      <li><img src="assets/img/portfolio/5.jpg" /></li>
+                      <li><img src="assets/img/portfolio/6.jpg" /></li>
+                    </ul>
+                  </div>
+                  <p class="item-intro-intro">
+                    僕が大学2年生になる前の春休みに九州にいる祖父母の家に行って制作したHPです。つまづいた時に最初はうまい検索の仕方がわかりませんでしたが、徐々に検索力が身につきました。今思うとずっと手探り状態でやっていたなと思いましたがとても良い経験になりました。大学でWebの基礎を学んだ後初めて公の場に出しました。基本的にデザインは法務事務所らしくきっちりとした感じを出せるように作り、シンプルで情報量が多くならないように作りました。
                   </p>
                   <ul class="list-inline">
                     <li>
-                      <strong>Client:</strong>
-                      Finish
+                      <strong>Category : </strong>
+                      Office , Redesign
                     </li>
                     <li>
-                      <strong>Category:</strong>
-                      Identity
+                      <strong>Language tools :</strong>
+                      HTML , SCSS , React , JavaScript , Bootstrap , Firebase
                     </li>
                   </ul>
+                  <ul class="button-flex">
+                    <li>
+                      <a
+                        href="https://www.arttada.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >HP</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/t-riku/tada-home-redesign/tree/master"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >GitHub</a
+                      >
+                    </li>
+                  </ul>
+
                   <button
-                    class="btn btn-primary btn-xl text-uppercase"
+                    class="btn button-yellow btn-xl text-uppercase"
                     data-bs-dismiss="modal"
                     type="button"
                   >
                     <i class="fas fa-xmark me-1"></i>
-                    Close Project
+                    Close
                   </button>
                 </div>
               </div>
@@ -878,39 +1175,64 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project details-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">ONE OK ROCK</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    僕自身がこのバンドの大ファンで公式のサイトを見て正直あまりかっこよくないなと思ったので自分で作ってみようと思って制作しました。
                   </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/4.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  <div class="modalImg-wrapper">
+                    <div class="mainImg">
+                      <img src="assets/img/portfolio/4.jpg" />
+                    </div>
+                    <ul class="subImg">
+                      <li class="current">
+                        <img src="assets/img/portfolio/4.jpg" />
+                      </li>
+                      <li><img src="assets/img/portfolio/5.jpg" /></li>
+                      <li><img src="assets/img/portfolio/6.jpg" /></li>
+                      <li><img src="assets/img/portfolio/1.jpg" /></li>
+                    </ul>
+                  </div>
+                  <p class="item-intro-intro">
+                    僕が大学2年生になる前の春休みに九州にいる祖父母の家に行って制作したHPです。つまづいた時に最初はうまい検索の仕方がわかりませんでしたが、徐々に検索力が身につきました。今思うとずっと手探り状態でやっていたなと思いましたがとても良い経験になりました。大学でWebの基礎を学んだ後初めて公の場に出しました。基本的にデザインは法務事務所らしくきっちりとした感じを出せるように作り、シンプルで情報量が多くならないように作りました。
                   </p>
                   <ul class="list-inline">
                     <li>
-                      <strong>Client:</strong>
-                      Lines
+                      <strong>Category : </strong>
+                      Music
                     </li>
                     <li>
-                      <strong>Category:</strong>
-                      Branding
+                      <strong>Language tools :</strong>
+                      HTML , SCSS , JavaScript , jQuery , Bootstrap
                     </li>
                   </ul>
+                  <ul class="button-flex">
+                    <li>
+                      <a
+                        href="https://www.arttada.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >Demo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/t-riku/oneokrock_web/tree/master"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >GitHub</a
+                      >
+                    </li>
+                  </ul>
+
                   <button
-                    class="btn btn-primary btn-xl text-uppercase"
+                    class="btn button-yellow btn-xl text-uppercase"
                     data-bs-dismiss="modal"
                     type="button"
                   >
                     <i class="fas fa-xmark me-1"></i>
-                    Close Project
+                    Close
                   </button>
                 </div>
               </div>
@@ -937,39 +1259,66 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project details-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">DHU</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    大学のサイトのWebカテゴリーページの自身で考えたターゲットに向けた
+                    1
+                    ページで完結する形のプロモーションサイトを作成するという大学の授業があって、その時に作成したHPです。
                   </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/5.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  <div class="modalImg-wrapper">
+                    <div class="mainImg">
+                      <img src="assets/img/portfolio/5.jpg" />
+                    </div>
+                    <ul class="subImg">
+                      <li class="current">
+                        <img src="assets/img/portfolio/5.jpg" />
+                      </li>
+                      <li><img src="assets/img/portfolio/6.jpg" /></li>
+                      <li><img src="assets/img/portfolio/1.jpg" /></li>
+                      <li><img src="assets/img/portfolio/2.jpg" /></li>
+                    </ul>
+                  </div>
+                  <p class="item-intro-intro">
+                    僕が大学2年生になる前の春休みに九州にいる祖父母の家に行って制作したHPです。つまづいた時に最初はうまい検索の仕方がわかりませんでしたが、徐々に検索力が身につきました。今思うとずっと手探り状態でやっていたなと思いましたがとても良い経験になりました。大学でWebの基礎を学んだ後初めて公の場に出しました。基本的にデザインは法務事務所らしくきっちりとした感じを出せるように作り、シンプルで情報量が多くならないように作りました。
                   </p>
                   <ul class="list-inline">
                     <li>
-                      <strong>Client:</strong>
-                      Southwest
+                      <strong>Category : </strong>
+                      Class , Redesign
                     </li>
                     <li>
-                      <strong>Category:</strong>
-                      Website Design
+                      <strong>Language tools :</strong>
+                      HTML , SCSS , JavaScript , jQuery , Bootstrap
                     </li>
                   </ul>
+                  <ul class="button-flex">
+                    <li>
+                      <a
+                        href="https://www.arttada.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >Demo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/t-riku/dhu_redesign/tree/master"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >GitHub</a
+                      >
+                    </li>
+                  </ul>
+
                   <button
-                    class="btn btn-primary btn-xl text-uppercase"
+                    class="btn button-yellow btn-xl text-uppercase"
                     data-bs-dismiss="modal"
                     type="button"
                   >
                     <i class="fas fa-xmark me-1"></i>
-                    Close Project
+                    Close
                   </button>
                 </div>
               </div>
@@ -996,39 +1345,65 @@
               <div class="col-lg-8">
                 <div class="modal-body">
                   <!-- Project details-->
-                  <h2 class="text-uppercase">Project Name</h2>
+                  <h2 class="text-uppercase">portfolio</h2>
                   <p class="item-intro text-muted">
-                    Lorem ipsum dolor sit amet consectetur.
+                    Start
+                    Bootstrapで自分のportfolioサイトを作りたいなと思い、制作しました。
                   </p>
-                  <img
-                    class="img-fluid d-block mx-auto"
-                    src="assets/img/portfolio/6.jpg"
-                    alt="..."
-                  />
-                  <p>
-                    Use this area to describe your project. Lorem ipsum dolor
-                    sit amet, consectetur adipisicing elit. Est blanditiis
-                    dolorem culpa incidunt minus dignissimos deserunt repellat
-                    aperiam quasi sunt officia expedita beatae cupiditate,
-                    maiores repudiandae, nostrum, reiciendis facere nemo!
+                  <div class="modalImg-wrapper">
+                    <div class="mainImg">
+                      <img src="assets/img/portfolio/6.jpg" />
+                    </div>
+                    <ul class="subImg">
+                      <li class="current">
+                        <img src="assets/img/portfolio/6.jpg" />
+                      </li>
+                      <li><img src="assets/img/portfolio/1.jpg" /></li>
+                      <li><img src="assets/img/portfolio/2.jpg" /></li>
+                      <li><img src="assets/img/portfolio/3.jpg" /></li>
+                    </ul>
+                  </div>
+                  <p class="item-intro-intro">
+                    僕が大学2年生になる前の春休みに九州にいる祖父母の家に行って制作したHPです。つまづいた時に最初はうまい検索の仕方がわかりませんでしたが、徐々に検索力が身につきました。今思うとずっと手探り状態でやっていたなと思いましたがとても良い経験になりました。大学でWebの基礎を学んだ後初めて公の場に出しました。基本的にデザインは法務事務所らしくきっちりとした感じを出せるように作り、シンプルで情報量が多くならないように作りました。
                   </p>
                   <ul class="list-inline">
                     <li>
-                      <strong>Client:</strong>
-                      Window
+                      <strong>Category : </strong>
+                      Portfolio
                     </li>
                     <li>
-                      <strong>Category:</strong>
-                      Photography
+                      <strong>Language tools :</strong>
+                      HTML , SCSS , JavaScript , jQuery , Bootstrap , Firebase
                     </li>
                   </ul>
+                  <ul class="button-flex">
+                    <li>
+                      <a
+                        href="https://www.arttada.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >Demo</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://github.com/t-riku/t-riku__portfolio-design"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-outline-dark"
+                        >GitHub</a
+                      >
+                    </li>
+                  </ul>
+
                   <button
-                    class="btn btn-primary btn-xl text-uppercase"
+                    class="btn button-yellow btn-xl text-uppercase"
                     data-bs-dismiss="modal"
                     type="button"
                   >
                     <i class="fas fa-xmark me-1"></i>
-                    Close Project
+                    Close
                   </button>
                 </div>
               </div>
@@ -1053,5 +1428,14 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/pageTop.js"></script>
+    <!-- gallery js -->
+    <script src="js/gallery.js"></script>
+    <!-- <script src="js/gallery.js"></script> -->
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
